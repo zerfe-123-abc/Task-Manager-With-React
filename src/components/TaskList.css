@@ -1,0 +1,96 @@
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    width: 700px;
+    padding: 20px 40px;
+
+    margin: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15), 0 5px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+
+    max-height: 320px;
+    overflow-y: auto;
+}
+
+.task-list .tasks {
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+    font-size: 18px;
+
+    cursor: default;
+
+}
+
+.tasklist-header {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.details {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    padding: 0 40px;
+}
+
+.edit-delete-btn {
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.edit-delete-btn button {
+    padding: 5px;
+
+}
+
+dialog{
+    margin: auto;
+    border: none;
+    border-radius: 12px;
+    padding: 24px;
+    min-width: 320px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    
+}
+
+dialog::backdrop{
+    background: rgba(0, 0, 0, 0.45);
+}
+dialog button{
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.dialog .ok-cancel-btn{
+    display: flex;
+    gap:10px;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.confirm-label{
+    margin-top: 8px;
+}
+.delete-btn{
+    background: linear-gradient(135deg,rgb(165, 28, 28), brown);
+}
+.cancel-btn{
+    background: linear-gradient(135deg, white,gray);
+}
+.edit-icon, .delete-icon{
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+}

@@ -1,0 +1,47 @@
+.form-container{
+    width: 700px;
+    
+}
+.form-container form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 10px;
+    margin-top: 30px;
+    padding: 20px 40px;
+ 
+    box-shadow:  0 10px 25px rgba(0, 0, 0, 0.15), 0 5px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+}
+form label{
+    font-size: 18px;
+}
+.form-container form input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+form select{
+    padding: 10px;
+    border-radius: 10px;
+    width: 90%;
+
+    font-size: 14px;
+} 
+#priority-label, #category-label{
+   display: flex;
+   gap: 10px;
+   align-items: center;
+}
+form button{
+    width: fit-content;
+    padding: 10px;
+    font-size: 14px;
+    margin-top: 10px;
+
+    border-radius:10px;
+    background: linear-gradient(lightgreen,green);
+    color: whitesmoke;
+}
