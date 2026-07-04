@@ -1,16 +1,66 @@
-# React + Vite
+📝 Task Manager App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and interactive Task Manager built with React.
+This project helps users create, manage, and track their daily tasks with a clean and responsive UI.
 
-Currently, two official plugins are available:
+🚀 Features
+  ➕ Add new tasks
+  ✏️ Edit existing tasks
+  🗑️ Delete tasks
+  ☑️ Mark tasks as completed
+  🔍 Search tasks
+  🎯 Filter tasks (All / Active / Completed)
+  💾 Persistent storage using LocalStorag
+  📱 Responsive design
+  🎨 Clean UI with modern layout
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+🛠️ Built With
+  React (useState, useEffect)
+  JavaScript (ES6+)
+  CSS3
+  LocalStorage API
+  Vite (development setup)
 
-## React Compiler
+  📂 Project Structure
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+  src/
+|
+|--components/
+│   |--Filter.css
+│   |--Filter.jsx
+│   |--Form.css
+|   |--Form.jsx
+|   |--RenderTasks.css
+|   |--RenderTasks.jsx
+│   |--SearchBar.css
+│   |--SearchBar.jsx
+|   |--Summary.css
+|   |--Summary.jsx
+│
+|-- App.jsx
+|-- App.css
+|__main.jsx
 
-## Expanding the ESLint configuration
+⚙️ How to Run Locally
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Clone the repository: git clone https://github.com/zerfe-123-abc/Task-Manager-With-React.git
+
+Go into the project folder: cd task-manager-app
+
+Install dependencies: npm install
+
+Start the development server: npm run dev
+
+🧠 What I Learned From This Project
+=> Managing state in React
+=> Handling forms and inputs
+=> Passing props between components
+=> Updating arrays and objects immutably
+=> Conditional rendering
+=> Persisting data using LocalStorage
+=> Building reusable components
+=> Thinking in React architecture
+
+📸 Preview
+
+....
