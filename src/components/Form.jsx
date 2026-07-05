@@ -33,7 +33,8 @@ const Form = ({ editedtaskId, setEditedtaskId, data, setData, tasksArr, setTasks
             desc: "",
             priority: '',
             category: '',
-            duedate: ''
+            duedate: '',
+            isCompleted:false
         })
 
         setEditedtaskId(null);
@@ -48,9 +49,11 @@ const Form = ({ editedtaskId, setEditedtaskId, data, setData, tasksArr, setTasks
 
     return (
         <div className="form-container">
+            
             <form onSubmit={(e) => {
                 e.preventDefault();
             }}>
+                <h3>Add New Task</h3>
                 <label htmlFor="task-input">Task
                     <input name="title" value={data.title} onChange={handleChange}
                         type="text" id="task-input" placeholder="New Task"></input>
@@ -87,7 +90,7 @@ const Form = ({ editedtaskId, setEditedtaskId, data, setData, tasksArr, setTasks
                         name="duedate" type="date" id="due-date"></input>
                 </label>
 
-                <button className="add-edit-btn" type="button" onClick={addTask}>
+                <button className={`add-edit-btn ${data.title===""?'disabled' : ""}`}type="button" onClick={addTask}>
                     {`${editedtaskId === null ? '➕Add Task' : '💾Save Changes'}`}
                 </button>
 

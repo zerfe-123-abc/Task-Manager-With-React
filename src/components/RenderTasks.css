@@ -1,0 +1,166 @@
+.task-list {
+
+    background: white;
+
+    border-radius: 16px;
+
+    padding: 18px;
+
+    box-shadow: 0 4px 12px rgba(15, 23, 42, .08);
+
+    max-height: 450px;
+
+    overflow: auto;
+
+}
+
+.tasks {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 10px 16px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+.tasks:hover {
+
+    background: #F1F5F9;
+}
+
+.tasklist-header {
+
+    text-align: center;
+
+    margin-bottom: 20px;
+
+    font-size: 24px;
+
+    font-weight: 700;
+}
+
+.details {
+
+    margin: 12px 0 18px;
+
+    padding: 18px;
+
+    background: #F8FAFC;
+
+    border-left: 4px solid #2563EB;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.edit-delete-btn {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 10px;
+}
+
+.edit-icon,
+.delete-icon {
+
+    background: none;
+
+    border: none;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    transition: .2s;
+}
+
+.edit-icon:hover,
+.delete-icon:hover {
+
+    transform: scale(1.1);
+}
+
+dialog {
+    margin: auto;
+    border: none;
+    border-radius: 12px;
+    padding: 24px;
+    min-width: 320px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.45);
+}
+
+dialog button {
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.dialog .ok-cancel-btn {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.confirm-label {
+    margin-top: 8px;
+}
+
+.delete-btn {
+    color: white;
+    background: red;
+    border: none;
+}
+
+.cancel-btn {
+    background: lightgray;
+    border: none;
+}
+
+.edit-icon,
+.delete-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+@media (max-width:600px) {
+    .task-list {
+        padding: 16px;
+        max-width: none;
+    }
+
+    .tasks {
+
+        padding: 12px;
+
+    }
+
+    .details {
+
+        padding: 14px;
+
+    }
+}

@@ -9,7 +9,7 @@ const SearchBar = ({query,onSearch}) =>{
     return(
         <div className="search-bar">
             <form onSubmit={handleSubmit}>
-               <input type="text" placeholder="🔍Search for tasks" value={query} 
+               <input type="search" placeholder="🔍Search for tasks" value={query} 
                onChange={(e)=>{
                 onSearch(e.target.value);
                }}/>

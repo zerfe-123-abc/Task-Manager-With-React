@@ -1,4 +1,4 @@
-import './TaskList.css'
+import './RenderTasks.css';
 import { format, parse } from 'date-fns';
 import { useRef } from 'react';
 
@@ -19,10 +19,8 @@ const RenderTasks = ({
    setData,
    tasksArr,
    setTasksArr,
-   completedTasks,
-   setComplatedTasks,
    expandedItemId,
-   setExpandedItemId,
+    setExpandedItemId,
    filteredArr
 }) => {
    const dialogRef = useRef(null);
@@ -36,13 +34,15 @@ const RenderTasks = ({
       setExpandedItemId(id)
    }
 
-   const handleCheck = (task) => {
-      {
-         completedTasks.includes(task) ?
-         setComplatedTasks(completedTasks.filter(tasks => tasks !== task)) :
-         setComplatedTasks(prev => [...prev, task])
-      }
-   }
+  const toggleCheck = (id) => {
+      setTasksArr(prev=>
+         prev.map(task=>
+            task.id===id ? 
+            {...task,isCompleted : !task.isCompleted } :
+            task
+         )
+      )
+  }
 
    const editTask = (id) => {
       const currData = filteredArr.find(task => task.id === id);
@@ -74,11 +74,8 @@ const RenderTasks = ({
 
       <div className="task-list">
 
-         {tasksArr.length === 0 ? <p>No Tasks Yet!</p> :
-            (<>
-               <p className='tasklist-header'>Task list</p>
-               <hr></hr>
-            </>)}
+         {filteredArr.length === 0 && <p>No Tasks Yet!</p> }
+          
          {filteredArr.map((task) => {
             return (
                <div key={task.id}>
@@ -88,7 +85,7 @@ const RenderTasks = ({
                         handleExpand(task.id)
                      }}>{`${expandedItemId === task.id ? "▼ " : " ► "}${task.title}`}</p>
 
-                     <input onChange={() => { handleCheck(task) }} type="checkbox" checked={completedTasks.includes(task)}></input>
+                     <input onChange={() => { toggleCheck(task.id) }} type="checkbox" checked={task.isCompleted}></input>
 
                   </div>
 
@@ -115,6 +112,7 @@ const RenderTasks = ({
                <h2>Delete Task</h2>
                <hr></hr>
                <p className='confirm-label'>{`You are deleting "${filteredArr.find(task => task.id == taskToDelete)?.title}" !`}</p>
+               <p>This action cannot be undone.</p>
                <div className='ok-cancel-btn'>
                   <button onClick={confirmDelete} className='delete-btn'>Delete</button>
                   <button onClick={cancelModal} className='cancel-btn'>Cancel</button>
